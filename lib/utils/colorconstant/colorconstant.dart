@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class ColorConstant {
   static Color primaryblack = Color(0xFF000000);
   static Color primarywhite = Color(0xFFFFFFFF);
