@@ -40,4 +40,32 @@ class TextConstant {
       fontSize: 14,
       fontWeight: FontWeight.w200,
       color: ColorConstant.primarywhite.withOpacity(0.8));
+  static var selectedsearchtitle = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: ColorConstant.primarywhite.withOpacity(0.8));
+  static var selectedpageheading = TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.w400,
+      color: ColorConstant.primarywhite);
+  static var time = TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w400,
+      color: ColorConstant.primarywhite.withOpacity(0.8));
+  static var selectedpagesubheading = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w400,
+      color: ColorConstant.primarywhite.withOpacity(0.8));
+  static var cratetask = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: ColorConstant.primarywhite);
+  static var cratenewtask = TextStyle(
+      fontSize: 25,
+      fontWeight: FontWeight.w400,
+      color: ColorConstant.primarywhite);
+  static var edittask = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      color: ColorConstant.primarywhite);
 }

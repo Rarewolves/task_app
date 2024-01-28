@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:task_app/controller/mycontroller.dart';
 import 'package:task_app/utils/colorconstant/colorconstant.dart';
 import 'package:task_app/utils/iconconstant/iconconstant.dart';
 import 'package:task_app/utils/imageconstant/imageconstant.dart';
 import 'package:task_app/utils/textconstant/textconstant.dart';
 import 'package:task_app/view/home_screen/widget/card_screen.dart';
+import 'package:task_app/view/select_screen/select_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controllProvider = Provider.of<MyController>(context);
+
     return Scaffold(
       backgroundColor: ColorConstant.scaffoldColor,
 //       appBar: AppBar(
@@ -132,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                         ListView.builder(
                             physics: NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
-                            itemCount: 5,
+                            itemCount: 2,
                             itemBuilder: (context, index) => CardScreen())
                       ],
                     ),
@@ -144,7 +149,13 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SelectedScreen(),
+              ));
+        },
         child: Image.asset(
           IconConstant.Add,
           scale: 6,
